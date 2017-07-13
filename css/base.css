@@ -1,0 +1,43 @@
+h1 {
+  font-size: 0.36rem;
+}
+h4 {
+  font-size: 0.28rem;
+}
+.mt40 {
+  margin-top: 0.4rem;
+}
+.icon-user {
+  background: url("../images/user.svg") no-repeat 0;
+  background-size: 0.38rem;
+}
+.icon-password {
+  background: url("../images/psd.svg") no-repeat 0;
+  background-size: 0.38rem;
+}
+/*login start*/
+.login-title {
+  padding: 1rem;
+  text-align: center;
+}
+.login-main {
+  padding: 0 0.4rem;
+}
+.text {
+  padding-left: 0.2rem;
+  font-size: 0.32rem;
+  line-height: 0.8rem;
+  color: #222;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+.link-btn {
+  height: 0.8rem;
+  font-size: 0.32rem;
+  line-height: 0.8rem;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 0.1rem;
+  letter-spacing: 0.05rem;
+}
+/*login end*/

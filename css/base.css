@@ -8,25 +8,34 @@ h4 {
   margin-top: 0.4rem;
 }
 .icon-user {
-  background: url("../images/user.svg") no-repeat 0;
-  background-size: 0.38rem;
+  background: url("../images/user.png") no-repeat 0;
+  background-size: .64rem;
 }
 .icon-password {
-  background: url("../images/psd.svg") no-repeat 0;
-  background-size: 0.38rem;
+  background: url("../images/password.png") no-repeat 0;
+  background-size: .64rem;
 }
+.icon-userName {
+  background: url("../images/userName.png") no-repeat 0;
+  background-size: .64rem;
+}
+.icon-department{
+  background: url("../images/department.png") no-repeat 0;
+  background-size: .64rem;
+}
+
 /*login start*/
 .logo-title {
   padding: 1rem;
   text-align: center;
 }
-.login-main {
-  padding: 0 0.4rem;
+.container {
+  padding: 0 0.8rem;
 }
 .text {
-  padding-left: 0.2rem;
+  padding-left: 0.8rem;
   font-size: 0.32rem;
-  line-height: 0.8rem;
+  line-height: 0.62rem;
   color: #222;
   border: 0;
   border-bottom: 1px solid #ddd;
@@ -41,3 +50,9 @@ h4 {
   letter-spacing: 0.05rem;
 }
 /*login end*/
+/*menu start*/
+.menu-box{
+  font-size:.28rem;
+  text-align:center;
+}
+/*menu end*/

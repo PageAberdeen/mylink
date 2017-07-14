@@ -7,6 +7,9 @@ h4 {
 .mt40 {
   margin-top: 0.4rem;
 }
+.mb60{
+  margin-bottom: .6rem;
+}
 .icon-user {
   background: url("../images/user.png") no-repeat 0;
   background-size: .64rem;
@@ -23,7 +26,30 @@ h4 {
   background: url("../images/department.png") no-repeat 0;
   background-size: .64rem;
 }
-
+.icon-Inspection{
+  background: url("../images/Inspection.svg") no-repeat center;
+  background-size: .8rem;
+}
+.icon-service{
+  background:url("../images/service.svg") no-repeat center;
+  background-size: .8rem;
+}
+.icon-manage{
+  background:url("../images/manage.svg") no-repeat center;
+  background-size: .8rem;
+}
+.icon-ICloud{
+  background:url("../images/ICloud.svg") no-repeat center;
+  background-size: .8rem;
+}
+.icon-stat{
+  background:url("../images/Stat.svg") no-repeat center;
+  background-size: .8rem;
+}
+.icon-newMedia{
+  background: url("../images/newMedia.svg") no-repeat center;
+  background-size: .8rem;
+}
 /*login start*/
 .logo-title {
   padding: 1rem;
@@ -31,6 +57,9 @@ h4 {
 }
 .container {
   padding: 0 0.8rem;
+}
+.msg-container{
+  padding: 0 0.2rem;
 }
 .text {
   padding-left: 0.8rem;
@@ -55,4 +84,43 @@ h4 {
   font-size:.28rem;
   text-align:center;
 }
+.icon-box{
+  margin: 0 auto;
+  width: 1rem;
+  height:1rem;
+}
+
 /*menu end*/
+/*msg start*/
+.msg-box{
+  font-size: .32rem;
+  line-height: .6rem;
+}
+
+.msg-box li{
+  margin-bottom: .4rem;
+}
+
+.msg-box label{
+  padding-right: .1rem;
+  text-align: right;
+  vertical-align: top;
+}
+
+.msg-box select,
+.msg-date,
+.msg-text
+{
+  padding-left: .1rem;
+  height: .6rem;
+  font-size: .32rem;
+  border-radius: .1rem;
+}
+
+.msg-area{
+  padding: .1rem;
+  height: 1.2rem;
+  font-size: .32rem;
+  border-radius: .1rem;
+}
+/*msg end*/

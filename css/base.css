@@ -50,6 +50,14 @@ h4 {
   background: url("../images/newMedia.svg") no-repeat center;
   background-size: .8rem;
 }
+.icon-company{
+  background: url("../images/company.svg") no-repeat center;
+  background-size: .8rem;
+}
+.icon-project{
+  background: url("../images/project.svg") no-repeat center;
+  background-size: .8rem;
+}
 /*login start*/
 .logo-title {
   padding: 1rem;

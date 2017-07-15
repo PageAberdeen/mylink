@@ -12,13 +12,68 @@
   <h1>迈联科技运维管理平台</h1>
   <h4>员工注册</h4>
 </div>
-<form action="" class="row container">
-  <input type="text" class="col-12 text icon-user" placeholder="请输入用户名">
-  <input type="text" class="col-12 text mt40 icon-password" placeholder="请输入密码">
-  <input type="text" class="col-12 text mt40 icon-userName" placeholder="请输入姓名">
-  <input type="text" class="col-12 text mt40 icon-department" placeholder="请输入您所在部门">
-  <a href="login.html" class="col-12 link-btn mt40">注册</a>
+<form action="" id="register" class="row container">
+  <input type="text" name="user" class="col-12 text icon-user" placeholder="请输入账户名（手机号）">
+  <input type="password" name="password" class="col-12 text mt40 icon-password" placeholder="请输入密码">
+  <input type="text" name="userName" class="col-12 text mt40 icon-userName" placeholder="请输入姓名">
+  <select name="department" id="department" class="col-12 text mt40 icon-department">
+    <option value="-1">请选择你所在部门</option>
+  </select>
+  <a href="login.html"  class="col-12 link-btn mt40 js-register">注册</a>
 </form>
+<script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/weixin.js"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="js/zdy-vlidate.js"></script>
+<script src="js/messages_zh.js"></script>
+<script>
+  $().ready(function(){
+    var department = ['运维一线','运维二线','运维三线','运维开发','运维策划编辑','运维推广培训']//数据库取值
+    for(var i = 0 ; i < department.length; i++) {
+      var flag = "<option value='"+i+"'>" +department[i]+"</option>"
+      $('#department').append(flag)
+    }
+    function validform(){
+      return $('#register').validate({
+        rules:{
+          user: {
+            required: true,
+            mobile: true
+          },
+          password: {
+            required: true,
+            chrnum: true,
+            minlength: 6
+          },
+          userName: {
+            required: true,
+            chinese: true
+          },
+          department: {
+            required: true,
+            selectNone: true
+          }
+        },
+        messages:{
+          password: {
+            minlength: "*密码长度不能低于6个字符"
+          }
+        }
+      })
+    }
+
+    $(validform())
+    $('.js-register').on('click',function(e){
+      e.preventDefault()
+      if(validform().form()){ //通过验证之后执行
+        alert('注册成功')
+        window.location.href="login.html"
+      }else{
+
+      }
+    })
+  })
+
+</script>
 </body>
 </html>

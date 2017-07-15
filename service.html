@@ -21,7 +21,7 @@
       </li>
       <li class="row">
         <label for="" class="col-4">单位名称：</label>
-        <select name="" id="" class="col-8">
+        <select name="" id="company" class="col-8">
           <option value="-1">请选择运维单位</option>
         </select>
       </li>
@@ -33,6 +33,9 @@
         <label for="" class="col-4">类别：</label>
         <select name="" id="" class="col-8">
           <option value="-1">请选择巡检单位类别</option>
+          <option value="0">一线</option>
+          <option value="1">二线</option>
+          <option value="2">三线</option>
         </select>
       </li>
       <li class="row">
@@ -61,5 +64,13 @@
 </div>
 
 <script src="js/weixin.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script>
+  var company = ['柳州市总工会','柳州质检','柳州人设','..'] //数据库取值生成数组
+  for(var i = 0 ; i < company.length; i++) {
+    var flag = "<option value='"+i+"'>" +company[i]+"</option>"
+    $('#company').append(flag)
+  }
+</script>
 </body>
 </html>

@@ -10,6 +10,12 @@ h4 {
 .mb60{
   margin-bottom: .6rem;
 }
+.error{
+  display: block;
+  font-size:.24rem;
+  color:red;
+  clear: both;
+}
 .icon-user {
   background: url("../images/user.png") no-repeat 0;
   background-size: .64rem;

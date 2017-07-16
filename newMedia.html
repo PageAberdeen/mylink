@@ -10,7 +10,7 @@
 <body>
 <div class="msg-container">
   <h4 class="mb60">>>>新媒体运维</h4>
-  <form action="" class="row  msg-box">
+  <form action="" id="newMedia" class="row  msg-box">
     <ul class="row">
       <li class="row">
         <label for="" class="col-4">部门：</label>
@@ -21,13 +21,13 @@
       </li>
       <li class="row">
         <label for="" class="col-4">单位名称：</label>
-        <select name="" id="" class="col-8">
+        <select name="unitName" id="" class="col-8">
           <option value="-1">请选择运维单位</option>
         </select>
       </li>
       <li class="row">
         <label for="" class="col-4">类别：</label>
-        <select name="" id="" class="col-8">
+        <select name="category" id="" class="col-8">
           <option value="-1">请选择类别</option>
           <option value="0">网站</option>
           <option value="1">微信</option>
@@ -36,21 +36,25 @@
       </li>
       <li class="row">
         <label for="" class="col-4">发布日期：</label>
-        <input type="text" class="col-8 msg-date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="请选择巡检日期">
+        <input type="text" name="release" class="col-8 msg-date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="请选择发布日期">
       </li>
       <li class="row">
         <label for="" class="col-4"> 内容标题:</label>
-        <textarea name="" id="" class="col-8 msg-area" placeholder="请输入内容标题"></textarea>
+        <textarea name="title" id="" class="col-8 msg-area" placeholder="请输入内容标题"></textarea>
       </li>
       <li class="row">
         <label for="" class="col-4">其他：</label>
         <textarea name="" id="" class="col-8 msg-area" placeholder="如其他工作可在此补充（如无请填写无）"></textarea>
       </li>
     </ul>
-    <input type="submit" class="col-12 link-btn " value="提交">
+    <a  class="col-12 link-btn  js-newMedia" >提交</a>
   </form>
 </div>
-
+<script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/resize.js"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="js/zdy-vlidate.js"></script>
+<script src="js/messages_zh.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

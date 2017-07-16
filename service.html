@@ -10,7 +10,7 @@
 <body>
 <div class="msg-container">
   <h4 class="mb60">>>>维修运维</h4>
-  <form action="" class="row  msg-box">
+  <form action="" id="service" class="row  msg-box">
     <ul class="row">
       <li class="row">
         <label for="" class="col-4">部门：</label>
@@ -21,17 +21,17 @@
       </li>
       <li class="row">
         <label for="" class="col-4">单位名称：</label>
-        <select name="" id="company" class="col-8">
+        <select name="unitName" id="company" class="col-8">
           <option value="-1">请选择运维单位</option>
         </select>
       </li>
       <li class="row">
         <label for="" class="col-4">详细地址：</label>
-        <input type="text" class="col-8 msg-date" placeholder="如438办公室魏女士">
+        <input type="text" name="address" class="col-8 msg-date" placeholder="如438办公室魏女士">
       </li>
       <li class="row">
         <label for="" class="col-4">类别：</label>
-        <select name="" id="" class="col-8">
+        <select name="category" id="" class="col-8">
           <option value="-1">请选择巡检单位类别</option>
           <option value="0">一线</option>
           <option value="1">二线</option>
@@ -40,37 +40,34 @@
       </li>
       <li class="row">
         <label for="" class="col-4">报修日期：</label>
-        <input type="text" class="col-8 msg-date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="请选择巡检日期">
+        <input type="text" name="repairDate" class="col-8 msg-date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="请选择报修日期">
       </li>
       <li class="row">
         <label for="" class="col-4">处理日期：</label>
-        <input type="text" class="col-8 msg-date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="请选择巡检日期">
+        <input type="text" name="handleDate" class="col-8 msg-date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="请选择处理日期">
       </li>
       <li class="row">
         <label for="" class="col-4">报修内容:</label>
-        <textarea name="" id="" class="col-8 msg-area" placeholder="请输入保修内容"></textarea>
+        <textarea name="repairContent" id="" class="col-8 msg-area" placeholder="请输入保修内容"></textarea>
       </li>
       <li class="row">
         <label for="" class="col-4"> 故障记录（检查判断）:</label>
-        <textarea name="" id="" class="col-8 msg-area" placeholder="请输入故障记录（检查判断）"></textarea>
+        <textarea name="failureReport" id="" class="col-8 msg-area" placeholder="请输入故障记录（检查判断）"></textarea>
       </li>
       <li class="row">
         <label for="" class="col-4">故障原因及解决方法：</label>
-        <textarea name="" id="" class="col-8 msg-area" placeholder="请输入处理故障原因及解决方法"></textarea>
+        <textarea name="resolvent" id="" class="col-8 msg-area" placeholder="请输入处理故障原因及解决方法"></textarea>
       </li>
     </ul>
-    <input type="submit" class="col-12 link-btn " value="提交">
+    <a  class="col-12 link-btn js-service" >提交</a>
   </form>
 </div>
 
-<script src="js/resize.js"></script>
 <script src="js/jquery-1.11.1.min.js"></script>
-<script>
-  var company = ['柳州市总工会','柳州质检','柳州人设','..'] //数据库取值生成数组
-  for(var i = 0 ; i < company.length; i++) {
-    var flag = "<option value='"+i+"'>" +company[i]+"</option>"
-    $('#company').append(flag)
-  }
-</script>
+<script src="js/resize.js"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="js/zdy-vlidate.js"></script>
+<script src="js/messages_zh.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

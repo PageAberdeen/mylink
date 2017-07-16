@@ -12,8 +12,10 @@ h4 {
 }
 p.error{
   float: left;
+  width:100%;
   font-size:.24rem;
   line-height: .24rem;
+  text-align: right;
   color:red;
 }
 .icon-user {

@@ -6,6 +6,7 @@
   <title>教育运维</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/dataPicker.css">
 </head>
 <body>
 <div class="msg-container">
@@ -33,7 +34,7 @@
       </li>
       <li class="row">
         <label for="" class="col-4">外出日期：</label>
-        <input type="text" name="outTime" class="col-8 msg-date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="请选择外出日期">
+        <input type="text" id="outTime" name="outTime" class="col-8 msg-date" readonly="readonly" placeholder="请选择外出日期">
       </li>
       <li class="row">
         <label for="" class="col-4"> 内容描述:</label>
@@ -53,6 +54,8 @@
 <script src="js/jquery.validate.js"></script>
 <script src="js/zdy-vlidate.js"></script>
 <script src="js/messages_zh.js"></script>
+<script src="js/iscroll.js"></script>
+<script src="js/datePicker.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

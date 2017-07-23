@@ -6,6 +6,7 @@
   <title>新媒体运维</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/dataPicker.css">
 </head>
 <body>
 <div class="msg-container">
@@ -36,7 +37,7 @@
       </li>
       <li class="row">
         <label for="" class="col-4">发布日期：</label>
-        <input type="text" name="release" class="col-8 msg-date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="请选择发布日期">
+        <input type="text" name="release" id="releaseDate" class="col-8 msg-date" readonly="readonly" placeholder="请输入发布日期">
       </li>
       <li class="row">
         <label for="" class="col-4"> 内容标题:</label>
@@ -55,6 +56,8 @@
 <script src="js/jquery.validate.js"></script>
 <script src="js/zdy-vlidate.js"></script>
 <script src="js/messages_zh.js"></script>
+<script src="js/iscroll.js"></script>
+<script src="js/datePicker.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

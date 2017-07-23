@@ -6,6 +6,7 @@
   <title>维修运维</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/dataPicker.css">
 </head>
 <body>
 <div class="msg-container">
@@ -40,11 +41,11 @@
       </li>
       <li class="row">
         <label for="" class="col-4">报修日期：</label>
-        <input type="text" name="repairDate" class="col-8 msg-date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="请选择报修日期">
+        <input type="text" name="repairDate" id="repairDate" class="col-8 msg-date" readonly="readonly" placeholder="请选择报修日期">
       </li>
       <li class="row">
         <label for="" class="col-4">处理日期：</label>
-        <input type="text" name="handleDate" class="col-8 msg-date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="请选择处理日期">
+        <input type="text" name="handleDate" id="handleDate" class="col-8 msg-date" readonly="readonly" placeholder="请选择处理日期">
       </li>
       <li class="row">
         <label for="" class="col-4">报修内容:</label>
@@ -68,6 +69,8 @@
 <script src="js/jquery.validate.js"></script>
 <script src="js/zdy-vlidate.js"></script>
 <script src="js/messages_zh.js"></script>
+<script src="js/iscroll.js"></script>
+<script src="js/datePicker.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

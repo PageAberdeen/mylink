@@ -6,6 +6,7 @@
   <title>项目录入</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/dataPicker.css">
 </head>
 <body>
 <div class="msg-container">
@@ -29,11 +30,11 @@
       </li>
       <li class="row">
         <label for="" class="col-4">合同开始时间：</label>
-        <input type="text" class="col-8 msg-date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="请选择日期">
+        <input type="text" id="contractStar" class="col-8 msg-date" readonly="readonly" placeholder="请选择日期">
       </li>
       <li class="row">
         <label for="" class="col-4">合同结束时间:</label>
-        <input type="text" class="col-8 msg-date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="请选择日期">
+        <input type="text" id="contractEnd" class="col-8 msg-date" readonly="readonly" placeholder="请选择日期">
       </li>
       <li class="row">
         <label for="" class="col-4"> 项目说明:</label>
@@ -60,6 +61,13 @@
   </form>
 </div>
 
+<script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/resize.js"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="js/zdy-vlidate.js"></script>
+<script src="js/messages_zh.js"></script>
+<script src="js/main.js"></script>
+<script src="js/iscroll.js"></script>
+<script src="js/datePicker.js"></script>
 </body>
 </html>

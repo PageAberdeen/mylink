@@ -6,6 +6,7 @@
   <title>教育运维</title>
   <link rel="stylesheet" href="{php echo $this->_css_url}reset.css">
   <link rel="stylesheet" href="{php echo $this->_css_url}base.css">
+  <link rel="stylesheet" href="{php echo $this->_css_url}dataPicker.css">
 </head>
 <body>
 <div class="msg-container">
@@ -14,19 +15,15 @@
     <ul class="row">
       <li class="row">
         <label for="" class="col-4">部门：</label>
-        <span class="col-8 msg-text js-company">{$user_info['department']}</span></li>
+        <span class="col-8 alt-text js-company">{$user_info['department']}</span></li>
       <li class="row">
         <label class="col-4">参与人员：</label>
-        <span class="col-8 msg-text js-personnel">{$user_info['username']}</span>
+        <span class="col-8 alt-text js-company">{$user_info['username']}</span>
       </li>
-      <li class="row">
-        <label for="" class="col-4">单位名称：</label>
-        <select name="unitName" id="unitName" class="col-8">
-          <option value="">请选择学校名称</option>
-		  {loop $listcp $cp}
-				<option value="{$cp['title']}">{$cp['title']}</option>
-		  {/loop}
-        </select>
+      <li class="row sear-box">
+		<label for="" class="col-4">单位名称：</label>
+        <input type="text" name="unitName" id="kw" onkeyup="getContent(this)" class="msg-date col-8" placeholder="请输入学校名称">
+        <div id="append" class="col-8 sear-list"></div>
       </li>
       <li class="row">
         <label for="" class="col-4">类别：</label>
@@ -38,7 +35,8 @@
       </li>
       <li class="row">
         <label for="" class="col-4">外出日期：</label>
-        <input type="date" name="outTime" id="outTime" class="col-8 msg-date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="请选择外出日期">
+        <!--<input type="date" name="outTime" id="outTime" class="col-8 msg-date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="请选择外出日期">-->
+		<input type="text" id="outTime" name="outTime" class="col-8 msg-date" readonly="readonly" placeholder="请选择外出日期">
       </li>
       <li class="row">
         <label for="" class="col-4"> 内容描述:</label>
@@ -59,14 +57,26 @@
 <script src="{php echo $this->_script_url}zdy-vlidate.js"></script>
 <script src="{php echo $this->_script_url}messages_zh.js"></script>
 <script src="{php echo $this->_script_url}main.js"></script>
+<script src="{php echo $this->_script_url}iscroll.js"></script>
+<script src="{php echo $this->_script_url}datePicker.js"></script>
+<script src="{php echo $this->_script_url}AutoSearch.js"></script>
 </body>
 </html>
+<script>
+var data =
+{
+	{loop $listcp $cp}
+	{php echo '"'.$cp['title'].'"'}:{php echo '"'.$cp['id'].'"'},
+	{/loop}
+};
+</script>
+
 <script language="javascript">
 	function get_mobile_code(){
 		var url = window.location.href;
 		var url1=url+'&op=edit';
 		
-		var unitName1=document.getElementById("unitName").value;
+		var unitName1=document.getElementById("kw").value;
 		var category1=document.getElementById("icloudCategory").value;
 		var InspectionDate1=document.getElementById("outTime").value;
 		var InspectionContent1=document.getElementById("icoudDescribe").value;
@@ -75,7 +85,7 @@
 				return false;
 		}else{
 		
-        $.post(url1,{text1:jQuery.trim($('#unitName').val()),text2:jQuery.trim($('#icloudCategory').val()),text3:jQuery.trim($('#outTime').val()),text4:jQuery.trim($('#icoudDescribe').val()),text5:jQuery.trim($('#otherinfo').val())}, function(msg) {
+        $.post(url1,{text1:jQuery.trim($('#kw').val()),text2:jQuery.trim($('#icloudCategory').val()),text3:jQuery.trim($('#outTime').val()),text4:jQuery.trim($('#icoudDescribe').val()),text5:jQuery.trim($('#otherinfo').val())}, function(msg) {
             msg = msg.substring(0, 1);
 			if(msg=='1'){
 				alert('提交成功');

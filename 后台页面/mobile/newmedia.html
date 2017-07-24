@@ -6,6 +6,7 @@
   <title>新媒体运维</title>
   <link rel="stylesheet" href="{php echo $this->_css_url}reset.css">
   <link rel="stylesheet" href="{php echo $this->_css_url}base.css">
+  <link rel="stylesheet" href="{php echo $this->_css_url}dataPicker.css">
 </head>
 <body>
 <div class="msg-container">
@@ -39,7 +40,8 @@
       </li>
       <li class="row">
         <label for="" class="col-4">发布日期：</label>
-        <input type="date" name="release" id="release" class="col-8 msg-date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="请选择发布日期">
+        <!--<input type="date" name="release" id="release" class="col-8 msg-date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="请选择发布日期">-->
+		<input type="text" name="release" id="releaseDate" class="col-8 msg-date" readonly="readonly" placeholder="请输入发布日期">
       </li>
       <li class="row">
         <label for="" class="col-4"> 内容标题:</label>
@@ -59,6 +61,8 @@
 <script src="{php echo $this->_script_url}zdy-vlidate.js"></script>
 <script src="{php echo $this->_script_url}messages_zh.js"></script>
 <script src="{php echo $this->_script_url}main.js"></script>
+<script src="{php echo $this->_script_url}iscroll.js"></script>
+<script src="{php echo $this->_script_url}datePicker.js"></script>
 </body>
 </html>
 <script language="javascript">
@@ -68,14 +72,14 @@
 		
 		var unitName1=document.getElementById("unitName").value;
 		var category1=document.getElementById("category").value;
-		var InspectionDate1=document.getElementById("release").value;
+		var InspectionDate1=document.getElementById("releaseDate").value;
 		var InspectionContent1=document.getElementById("title").value;
 		var problemLog1=document.getElementById("otherinfo").value;
 		if (unitName1==''||category1==''||InspectionDate1==''||InspectionContent1==''||problemLog1=='') {
 				return false;
 		}else{
 		
-        $.post(url1,{text1:jQuery.trim($('#unitName').val()),text2:jQuery.trim($('#category').val()),text3:jQuery.trim($('#release').val()),text4:jQuery.trim($('#title').val()),text5:jQuery.trim($('#otherinfo').val())}, function(msg) {
+        $.post(url1,{text1:jQuery.trim($('#unitName').val()),text2:jQuery.trim($('#category').val()),text3:jQuery.trim($('#releaseDate').val()),text4:jQuery.trim($('#title').val()),text5:jQuery.trim($('#otherinfo').val())}, function(msg) {
             msg = msg.substring(0, 1);
 			if(msg=='1'){
 				alert('提交成功');

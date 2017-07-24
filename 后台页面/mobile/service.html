@@ -6,6 +6,7 @@
   <title>维修运维</title>
   <link rel="stylesheet" href="{php echo $this->_css_url}reset.css">
   <link rel="stylesheet" href="{php echo $this->_css_url}base.css">
+  <link rel="stylesheet" href="{php echo $this->_css_url}dataPicker.css">
 </head>
 <body>
 <div class="msg-container">
@@ -44,11 +45,13 @@
       </li>
       <li class="row">
         <label for="" class="col-4">报修日期：</label>
-        <input type="date" name="repairDate" id="repairDate" class="col-8 msg-date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="请选择报修日期">
+        <!--<input type="date" name="repairDate" id="repairDate" class="col-8 msg-date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="请选择报修日期">-->
+		<input type="text" name="repairDate" id="repairDate" class="col-8 msg-date" readonly="readonly" placeholder="请选择报修日期">
       </li>
       <li class="row">
         <label for="" class="col-4">处理日期：</label>
-        <input type="date" name="handleDate" id="handleDate" class="col-8 msg-date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="请选择处理日期">
+        <!--<input type="date" name="handleDate" id="handleDate" class="col-8 msg-date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="请选择处理日期">-->
+		<input type="text" name="handleDate" id="handleDate" class="col-8 msg-date" readonly="readonly" placeholder="请选择处理日期">
       </li>
       <li class="row">
         <label for="" class="col-4">报修内容:</label>
@@ -73,6 +76,8 @@
 <script src="{php echo $this->_script_url}zdy-vlidate.js"></script>
 <script src="{php echo $this->_script_url}messages_zh.js"></script>
 <script src="{php echo $this->_script_url}main.js"></script>
+<script src="{php echo $this->_script_url}iscroll.js"></script>
+<script src="{php echo $this->_script_url}datePicker.js"></script>
 </body>
 </html>
 <script language="javascript">

@@ -153,39 +153,4 @@ $().ready(function(){
 
     }
   })
-  /*时间插件*/
-    /*新媒体运维*/
-  $('#releaseDate').datePicker({
-    beginyear: 2017,
-    theme: 'datetime'
-  });
-    /*教育*/
-  $('#outTime').datePicker({
-    beginyear: 2017,
-    theme: 'datetime'
-  });
-  /*巡检*/
-  $('#InspectionDate').datePicker({
-    beginyear: 2017,
-    theme: 'datetime'
-  });
-  /*报修*/
-  $('#repairDate').datePicker({
-    beginyear: 2017,
-    theme: 'datetime'
-  });
-  $('#handleDate').datePicker({
-    beginyear: 2017,
-    theme: 'datetime'
-  });
-   /*合同录入*/
-  $('#contractStar').datePicker({
-    beginyear: 2017,
-    theme: 'date'
-  });
-  $('#contractEnd').datePicker({
-    beginyear: 2017,
-    theme: 'date'
-  });
-
 })
